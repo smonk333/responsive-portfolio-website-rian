@@ -18,24 +18,151 @@
    <body>
       <!--==================== HEADER ====================-->
       <header class="header" id="header">
-         
+         <nav class="nav container">
+            <a href="#" class="nav__logo">
+               <span class="nav__logo-circle">G</span>
+                <span class="nav__logo-name">Garrett Boling.</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+               <span class = "nav__title">Menu</span>
+
+               <h3 class="nav__name">Garrett</h3>
+
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#home" class="nav__link">home</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#about" class="nav__link">about me</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#projects" class="nav__link">projects</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#contact" class="nav__link">contact me</a>
+                  </li>
+               </ul>
+
+               <!--close button-->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
+            </div>
+
+            <div class="nav__buttons">
+               <!--toggle button-->
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-4-line"></i>
+               </div>
+            </div>
+         </nav>
       </header>
 
       <!--==================== MAIN ====================-->
       <main class="main">
          <!--==================== HOME ====================-->
          <section class="home section" id="home">
-            
+            <div class="home__container container grid">
+               <h1 class="home__name">
+                  Garrett Boling
+               </h1>
+               <div class="home__perfil">
+                  <div class="home__image">
+                     <img src="assets/img/home-perfil.jpg" alt="Portrait image of Garrett Boling" class="home__img">
+                     <div class="home__shadow"></div>
+
+                     <img src="assets/img/curved-arrow.svg" alt="curved arrow" class="home__arrow">
+                     <img src="assets/img/random-lines.svg" alt="random lines" class="home__line">
+
+                     <div class="geometric-box"></div>
+                  </div>
+
+                  <div class="home__social">
+                     <a href="https://www.instagram.com/garrett.boling1212" target="_blank" class="home__social-link">
+                        <i class="ri-instagram-line"></i>
+                     </a>
+
+                     <a href="https://www.linkedin.com/in/garrett-boling-04174b196/" target="_blank" class="home__social-link">
+                        <i class="ri-linkedin-box-line"></i>
+                     </a>
+
+                     <a href="https://github.com/smonk333" target="_blank" class="home__social-link">
+                        <i class="ri-github-line"></i>
+                     </a>
+                  </div>
+               </div>
+
+               <div class="home__info">
+                  <p class="home__description">
+                     <b>Backend developer</b> with experience in Python, Rust, C, and C++.
+                     I love data science, and I hope to work in the field of
+                     computational drug discovery in the future.
+                  </p>
+
+                  <a href="#about" class="home__scroll">
+                     <div class="home__scroll-box">
+                        <i class="ri-arrow-down-s-line"></i>
+                     </div>
+
+                     <span class="home__scroll-text">scroll down</span>
+                  </a>
+               </div>
+            </div>
          </section>
 
          <!--==================== ABOUT ====================-->
          <section class="about section" id="about">
-            
+            <div class="about__container container grid">
+               <h2 class="section__title-1">
+                  about me.
+               </h2>
+
+               <div class="about__perfil">
+                  <div class="about__image">
+                     <img src="assets/img/about-perfil.jpg" alt="Profile image" class="about__img">
+
+                     <div class="about__shadow"></div>
+
+                     <div class="geometric-box"></div>
+
+                     <img src="assets/img/random-lines.svg" alt="random lines" class="about__line">
+                     <div class="about__box"></div>
+                  </div>
+               </div>
+
+               <div class="about__info">
+                  <p class="about__description">
+                     filler text here yadda yadda yadda you get the point, just move on already
+                  </p>
+
+                  <ul class="about__list">
+                     <li class="about__item">
+                        my skills are None, i bring Nothing to the table (remove this later)
+                     </li>
+                  </ul>
+
+                  <div class="about__buttons">
+                     <a href="#contact" class="button">
+                        <i class="ri-send-plane-line"></i> contact me.
+                     </a>
+
+                     <a href="https://www.linkedin.com/in/garrett-boling-04174b196/" target="_blank" class="button__ghost">
+                        <i class="ri-linkedin-box-line"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
          </section>
 
          <!--==================== SERVICES ====================-->
          <section class="services section">
-            
+            <h2 class="section__title-2">
+               <span>services.</span>
+            </h2>
          </section>
 
          <!--==================== PROJECTS ====================-->
