@@ -13,7 +13,7 @@
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
 
-      <title>Responsive portfolio website Rian - Bedimcode</title>
+      <title>Garrett Boling - Portfolio</title>
    </head>
    <body>
       <!--==================== HEADER ====================-->
@@ -47,14 +47,14 @@
                   </li>
                </ul>
 
-               <!--close button-->
+               <!-- close button -->
                <div class="nav__close" id="nav-close">
                   <i class="ri-close-line"></i>
                </div>
             </div>
 
             <div class="nav__buttons">
-               <!--toggle button-->
+               <!-- toggle button -->
                <div class="nav__toggle" id="nav-toggle">
                   <i class="ri-menu-4-line"></i>
                </div>
@@ -403,7 +403,88 @@
 
          <!--==================== CONTACT ====================-->
          <section class="contact section" id="contact">
-            
+            <div class="contact__container container grid">
+               <div class="contact__data">
+                  <h2 class="section__title-2">
+                     <span>contact me.</span>
+                  </h2>
+
+                  <p class="contact__description-1">
+                     I respond best to emails and instant messages.
+                  </p>
+
+                  <p class="contact__description-2">
+                     I need your <b>name</b> and <b>email address</b>. You won't
+                     receive anything other than a reply from me.
+                  </p>
+
+                  <div class="geometric-box"></div>
+               </div>
+
+               <div class="contact__mail">
+                  <h2 class="contact__title">
+                     send me a message.
+                  </h2>
+
+                  <form action="" class="contact__form" id="contact-form">
+                     <div class="contact__group">
+                        <div class="contact__box">
+                           <input type="text" name="user_name" class="contact__input" id="name" required placeholder="first name">
+                           <label for="name" class="contact__label">first name</label>
+                        </div>
+
+                        <div class="contact__box">
+                           <input type="email" name="user_email" class="contact__input" id="email" required placeholder="email address">
+                           <label for="email" class="contact__label">email address</label>
+                        </div>
+                     </div>
+
+                     <div class="contact__box">
+                        <input type="text" name="user_subject" class="contact__input" id="subject" required placeholder="subject">
+                        <label for="subject" class="contact__label">subject</label>
+                     </div>
+
+                     <div class="contact__box contact__area">
+                        <textarea name="" id="user_message" class="contact__input" required placeholder="message"></textarea>
+                        <label for="user_message" class="contact__label">message</label>
+                     </div>
+
+                     <button type="submit" class="contact__button button">
+                        <i class="ri-send-plane-line"></i> send message.
+                     </button>
+                  </form>
+               </div>
+
+               <div class="contact__social">
+                  <img src="assets/img/curved-arrow.svg" alt="arrow" class="contact__social-arrow">
+
+                  <div class="contact__social-data">
+                     <div>
+                        <p class="contact__social-description-1">
+                           prefer instant messaging?
+                        </p>
+
+                        <p class="contact__social-description-1">
+                           contact me via social media
+                        </p>
+                     </div>
+
+                     <div class="contact__social-links">
+                        <a href="https://t.me/garrett_boling" target="_blank" class="contact__social-links">
+                           <i class="ri-telegram-line"></i>
+                        </a>
+
+                        <a href="https://m.me/garrett.boling1212" target="_blank" class="contact__social-links">
+                           <i class="ri-messenger-line"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/garrett-boling-04174b196/" target="_blank" class="contact__social-links">
+                           <i class="ri-linkedin-box-line"></i>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </section>
       </main>
 
