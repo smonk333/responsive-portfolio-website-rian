@@ -114,7 +114,7 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1120px;
+  max-width: 2640px;
   margin-inline: 1.5rem;
 }
 
@@ -392,12 +392,10 @@ img {
 }
 
 .home__social {
-  height: max-content;
   position: absolute;
   left: -3rem;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
+  top: 50%;
+  transform: translateY(-50%);
   display: grid;
   row-gap: 1rem;
 }
