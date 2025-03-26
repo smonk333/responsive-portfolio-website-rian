@@ -1190,16 +1190,16 @@ body.dark-theme {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .services__container {
-    grid-template-columns: repeat(2, 250px);
-  }
+/*@media screen and (min-width: 768px) {*/
+/*  .services__container {*/
+/*    grid-template-columns: repeat(2, 250px);*/
+/*  }*/
 
-  .services__container {
-    grid-template-columns: repeat(2, 350px);
-  }
+/*  .services__container {*/
+/*    grid-template-columns: repeat(2, 350px);*/
+/*  }*/
 
-}
+/*}*/
 
 /* For large devices */
 @media screen and (min-width: 1150px) {
