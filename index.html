@@ -34,7 +34,7 @@
 
                <ul class="nav__list">
                   <li class="nav__item">
-                     <a href="#home" class="nav__link">home</a>
+                     <a href="#home" class="nav__link active-link">home</a>
                   </li>
 
                   <li class="nav__item">
@@ -57,6 +57,9 @@
             </div>
 
             <div class="nav__buttons">
+               <!-- theme toggle button -->
+               <i class="ri-moon-line change-theme" id="theme-button"></i>
+
                <!-- toggle button -->
                <div class="nav__toggle" id="nav-toggle">
                   <i class="ri-menu-4-line"></i>
@@ -162,7 +165,7 @@
          </section>
 
          <!--==================== SERVICES ====================-->
-         <section class="services section">
+         <section class="services section" id="services">
             <h2 class="section__title-2">
                <span>services.</span>
             </h2>
@@ -496,11 +499,33 @@
 
       <!--==================== FOOTER ====================-->
       <footer class="footer">
-         
+         <div class="footer__container container grid">
+            <ul class="footer__links">
+               <li>
+                  <a href="#about" class="footer__link">about</a>
+               </li>
+
+               <li>
+                  <a href="#services" class="footer__link">services</a>
+               </li>
+
+               <li>
+                  <a href="#projects" class="footer__link">projects</a>
+               </li>
+            </ul>
+
+            <span class="footer__copy">
+               &#169; All Rights Reserved By
+               <a href="https://gboling.dev/">Garrett Boling,</a>
+               Website template designed by <a href="https://www.youtube.com/c/Bedimcode">Bedimcode</a>
+            </span>
+         </div>
       </footer>
 
       <!--========== SCROLL UP ==========-->
-      
+      <a href="#" class="scrollup" id="scroll-up">
+         <i class="ri-arrow-up-s-line"></i>
+      </a>
 
       <!--=============== SCROLLREVEAL ===============-->
       <script src=""></script>
