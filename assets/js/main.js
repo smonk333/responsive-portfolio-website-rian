@@ -1,29 +1,25 @@
 /*=============== SHOW MENU ===============*/
 
-const navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close')
+const navMenu = document.querySelector('#nav-menu'),
+    navToggle = document.querySelector('#nav-toggle'),
+    navClose = document.querySelector('#nav-close')
 
 /* Menu show */
-if(navToggle){
-    navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu')
-    })
-}
+navToggle?.addEventListener('click', () => {
+    navMenu.classList.add('show-menu')
+})
 
 /* Menu hidden */
-if(navClose){
-    navClose.addEventListener('click', () =>{
-        navMenu.classList.remove('show-menu')
-    })
-}
+navClose?.addEventListener('click', () => {
+    navMenu.classList.remove('show-menu')
+})
 
 /*=============== REMOVE MENU MOBILE ===============*/
 
 const navLink = document.querySelectorAll('.nav__link')
 
 const linkAction = () =>{
-    const navMenu = document.getElementById('nav-menu')
+    const navMenu = document.querySelector('#nav-menu')
     // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('show-menu')
 }
@@ -32,7 +28,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 /*=============== SHADOW HEADER ===============*/
 
 const shadowHeader = () =>{
-    const header = document.getElementById('header')
+    const header = document.querySelector('#header')
     // Add a class if the bottom offset is greater than 50 of the viewport
     this.scrollY >= 50 ? header.classList.add('shadow-header')
         : header.classList.remove('shadow-header')
@@ -40,8 +36,11 @@ const shadowHeader = () =>{
 window.addEventListener('scroll', shadowHeader)
 
 /*=============== EMAIL JS ===============*/
-const contactForm = document.getElementById('contact-form'),
-    contactMessage = document.getElementById('contact-message')
+const contactForm = document.querySelector('#contact-form'),
+    contactMessage = document.querySelector('#contact-message')
+
+const setFlashMessage = (text) => contactMessage.textContent = text;
+const clearFlashMessage = () => contactMessage.textContent = '';
 
 const sendEmail = async (e) => {
     e.preventDefault();
@@ -51,8 +50,8 @@ const sendEmail = async (e) => {
     const turnstileToken = formData.get('cf-turnstile-response');
 
     if (!turnstileToken?.trim()) {
-        contactMessage.textContent = 'Complete the captcha first ❌';
-        setTimeout(() => contactMessage.textContent = '', 5000);
+        setFlashMessage('Complete the captcha first');
+        setTimeout(clearFlashMessage, 5000);
         return;
     }
 
@@ -64,15 +63,15 @@ const sendEmail = async (e) => {
         });
 
         if (response.ok) {
-            contactMessage.textContent = 'Message sent successfully ✅';
+            setFlashMessage('Message sent successfully');
             contactForm.reset();
         } else {
             throw new Error('Failed to send message');
         }
     } catch (error) {
-        contactMessage.textContent = 'Failed to send message ❌';
+        contactMessage.textContent = 'Failed to send message';
     } finally {
-        setTimeout(() => contactMessage.textContent = '', 5000);
+        setTimeout(clearFlashMessage, 5000);
     }
 };
 
