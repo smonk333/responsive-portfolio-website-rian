@@ -36,8 +36,12 @@ curl_close($ch);
 
 $response_data = json_decode($response);
 if (!$response_data || $response_data->success !== true) {
-    header("Location: /login.php?error=recaptcha");
+    http_response_code(400);
+    echo json_encode(['success' => false, 'error' => 'Captcha failed']);
     exit;
 }
 
+// If Turnstile validation succeeds, return success
+echo json_encode(['success' => true]);
+exit;
 ?>

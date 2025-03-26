@@ -43,27 +43,40 @@ window.addEventListener('scroll', shadowHeader)
 const contactForm = document.getElementById('contact-form'),
     contactMessage = document.getElementById('contact-message')
 
-const sendEmail = (e) => {
-    e.preventDefault()
+const sendEmail = async (e) => {
+    e.preventDefault();
 
-    // serviceID - templateID - #form - pubkey
-    emailjs.sendForm('service_p5sg3k4', 'template_kht2g49', '#contact-form', 'bFzDqMRWDVi6zzKwu')
-        .then(() => {
-            // Show success message
-            contactMessage.textContent = 'Message sent successfully ✅'
-            // Remove message after five seconds
-            setTimeout(() => {
-                contactMessage.textContent = ''
-            }, 5000)
-            // Clear input fields
-            contactForm.reset()
-        }, () => {
-            // Show error message
-            contactMessage.textContent = 'Message not sent (service error) ❌'
-        })
-}
+    // Collect form data
+    const formData = new FormData(contactForm);
+    const turnstileToken = formData.get('cf-turnstile-response');
 
-contactForm.addEventListener('submit', sendEmail)
+    if (!turnstileToken?.trim()) {
+        contactMessage.textContent = 'Complete the captcha first ❌';
+        setTimeout(() => contactMessage.textContent = '', 5000);
+        return;
+    }
+
+    try {
+        // Send data to Cloudflare Worker
+        const response = await fetch('https://turnstile.gboling829.workers.dev/', {
+            method: 'POST',
+            body: formData
+        });
+
+        if (response.ok) {
+            contactMessage.textContent = 'Message sent successfully ✅';
+            contactForm.reset();
+        } else {
+            throw new Error('Failed to send message');
+        }
+    } catch (error) {
+        contactMessage.textContent = 'Failed to send message ❌';
+    } finally {
+        setTimeout(() => contactMessage.textContent = '', 5000);
+    }
+};
+
+contactForm.addEventListener('submit', sendEmail);
 
 /*=============== SHOW SCROLL UP ===============*/ 
 
