@@ -50,7 +50,7 @@ const sendEmail = async (e) => {
     const turnstileToken = formData.get('cf-turnstile-response');
 
     if (!turnstileToken?.trim()) {
-        setFlashMessage('Complete the captcha first');
+        setFlashMessage('Complete the captcha first ❌');
         setTimeout(clearFlashMessage, 5000);
         return;
     }
@@ -63,13 +63,13 @@ const sendEmail = async (e) => {
         });
 
         if (response.ok) {
-            setFlashMessage('Message sent successfully');
+            setFlashMessage('Message sent successfully ✅');
             contactForm.reset();
         } else {
-            throw new Error('Failed to send message');
+            throw new Error('Failed to send message ❌');
         }
     } catch (error) {
-        contactMessage.textContent = 'Failed to send message';
+        contactMessage.textContent = 'Failed to send message ❌';
     } finally {
         setTimeout(clearFlashMessage, 5000);
     }
