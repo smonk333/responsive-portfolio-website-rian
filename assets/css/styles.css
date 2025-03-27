@@ -128,8 +128,8 @@ body.dark-theme {
   --container-color: hsl(0, 0%, 12%);
 }
 
-/*========== 
-	Color changes in some parts of 
+/*==========
+	Color changes in some parts of
 	the website, in dark theme
 ==========*/
 .dark-theme .shadow-header {
@@ -194,7 +194,7 @@ body.dark-theme {
   padding-block: 4rem 2rem;
 }
 
-.section__title-1, 
+.section__title-1,
 .section__title-2 {
   position: relative;
   font-size: var(--h1-font-size);
@@ -202,13 +202,13 @@ body.dark-theme {
   margin: .75rem auto 2rem;
 }
 
-.section__title-1 span, 
+.section__title-1 span,
 .section__title-2 span {
   z-index: 5;
   position: relative;
 }
 
-.section__title-1::after, 
+.section__title-1::after,
 .section__title-2::after {
   content: '';
   width: 40px;
@@ -1160,7 +1160,7 @@ body.dark-theme {
   }
 
   .contact__container {
-    grid-template-columns: 500px;
+    grid-template-columns: 350px;
     justify-content: center;
   }
 
