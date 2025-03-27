@@ -5,13 +5,13 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
       <!--=============== FAVICON ===============-->
-      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+      <link rel="preload shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
       <!--=============== REMIXICONS ===============-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+      <link rel="preload stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
 
       <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
+      <link rel="preload stylesheet" href="assets/css/styles.css">
 
       <!-- cloudflare turnstile -->
       <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
@@ -34,19 +34,19 @@
 
                <ul class="nav__list">
                   <li class="nav__item">
-                     <a href="#home" class="nav__link active-link">home</a>
+                     <a href="#home" class="nav__link active-link">home.</a>
                   </li>
 
                   <li class="nav__item">
-                     <a href="#about" class="nav__link">about me</a>
+                     <a href="#about" class="nav__link">about me.</a>
                   </li>
 
                   <li class="nav__item">
-                     <a href="#projects" class="nav__link">projects</a>
+                     <a href="#projects" class="nav__link">projects.</a>
                   </li>
 
                   <li class="nav__item">
-                     <a href="#contact" class="nav__link button__ghost">contact me</a>
+                     <a href="#contact" class="nav__link button__ghost">contact me.</a>
                   </li>
                </ul>
 
@@ -74,11 +74,11 @@
          <section class="home section" id="home">
             <div class="home__container container grid">
                <h1 class="home__name">
-                  Garrett Boling
+                  Garrett Boling.
                </h1>
                <div class="home__perfil">
                   <div class="home__image">
-                     <img src="assets/img/home-perfil.jpg" alt="Portrait image of Garrett Boling" class="home__img" loading="lazy">
+                     <img src="assets/img/home-perfil.webp" alt="Portrait image of Garrett Boling" class="home__img">
                      <div class="home__shadow"></div>
 
                      <img src="assets/img/curved-arrow.svg" alt="curved arrow" class="home__arrow">
@@ -129,7 +129,7 @@
 
                <div class="about__perfil">
                   <div class="about__image">
-                     <img src="assets/img/about-perfil.jpg" alt="Profile image" class="about__img" loading="lazy">
+                     <img src="assets/img/about-perfil.webp" alt="Profile image" class="about__img" loading="lazy">
 
                      <div class="about__shadow"></div>
 
@@ -229,7 +229,7 @@
          <!--==================== PROJECTS ====================-->
          <section class="projects section" id="projects">
             <h2 class="section__title-1">
-               <span>projects</span>
+               <span>projects.</span>
             </h2>
 
             <div class="projects__container container grid">
@@ -518,12 +518,20 @@
             </ul>
 
             <span class="footer__copy">
-               &#169; All Rights Reserved By
+               &#169; All Rights Reserved
                <a href="https://gboling.dev/">Garrett Boling,</a>
                Website template designed by <a href="https://www.youtube.com/c/Bedimcode">Bedimcode</a>
             </span>
          </div>
       </footer>
+
+      <!-- script to stop unstyled content flash -->
+
+      <script>
+         document.addEventListener('DOMContentLoaded', () => {
+            document.body.style.display = 'block';
+         })
+      </script>
 
       <!--========== SCROLL UP ==========-->
       <a href="#" class="scrollup" id="scroll-up">
@@ -534,10 +542,10 @@
       <script src="/assets/js/scrollreveal.min.js"></script>
       
       <!--=============== EMAIL JS ===============-->
-      <script
-              type="text/javascript"
-              src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-      </script>
+<!--      <script-->
+<!--              type="text/javascript"-->
+<!--              src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">-->
+<!--      </script>-->
 
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>

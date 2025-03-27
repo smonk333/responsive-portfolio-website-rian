@@ -748,7 +748,7 @@ body.dark-theme {
 /*=============== PROJECTS ===============*/
 .projects {
   background-color: var(--container-color);
-    transition: background-color .4s;
+  transition: background-color .4s;
 }
 
 .projects__container {
@@ -1468,7 +1468,7 @@ body.dark-theme {
   }
 
   .services__container {
-    grid-template-columns: repeat(4, 282px);
+    grid-template-columns: repeat(3, 282px);
     column-gap: 5rem;
     padding-block: 3rem 5rem;
   }
