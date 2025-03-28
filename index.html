@@ -7,6 +7,13 @@
       <!--=============== FAVICON ===============-->
       <link rel="preload shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
+      <!-- preloading fonts and whatnot -->
+      <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
       <!--=============== REMIXICONS ===============-->
       <link rel="preload stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
 
@@ -17,6 +24,13 @@
       <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
 
       <title>Garrett Boling - Portfolio</title>
+
+      <style>
+         html {
+            visibility: hidden;
+            opacity: 0;
+         }
+      </style>
    </head>
    <body>
       <!--==================== HEADER ====================-->
@@ -525,14 +539,6 @@
          </div>
       </footer>
 
-      <!-- script to stop unstyled content flash -->
-
-      <script>
-         document.addEventListener('DOMContentLoaded', () => {
-            document.body.style.display = 'block';
-         })
-      </script>
-
       <!--========== SCROLL UP ==========-->
       <a href="#" class="scrollup" id="scroll-up">
          <i class="ri-arrow-up-s-line"></i>
@@ -549,5 +555,23 @@
 
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
+
+      <script>
+         window.addEventListener('load', () => {
+            setTimeout(() => {
+               document.documentElement.style.visibility = 'visible';
+               document.documentElement.style.opacity = '1';
+            }, 100)
+         });
+      </script>
+      <noscript>
+         <style>
+            html {
+               visibility: visible;
+               opacity: 1;
+            }
+         </style>
+         <p>Please enable JavaScript to view this website.</p>
+      </noscript>
    </body>
 </html>
