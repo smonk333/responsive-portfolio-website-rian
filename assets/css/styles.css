@@ -885,7 +885,7 @@ body.dark-theme {
 }
 
 .contact__title {
-  color: var(--title-color);
+  color: var(--white-color);
   font-size: var(--h2-font-size);
   margin-bottom: 2rem;
   text-align: center;
