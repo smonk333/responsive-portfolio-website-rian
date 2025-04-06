@@ -141,7 +141,7 @@ body.dark-theme {
   background-color: hsla(14, 70%, 50%, .2);
 }
 
-.dark-theme :is(.home__arrow, .home__line, .about__line) {
+.dark-theme :is(.home__arrow, .home__line, .about__line, .contact__social-arrow) {
   filter: none;
 }
 
@@ -860,7 +860,7 @@ body.dark-theme {
   transform: translateX(-3rem)
 }
 
-.contact__desctiption-1 {
+.contact__description-1 {
   color: var(--title-color);
   font-weight: var(--font-medium);
   margin-bottom: 2rem;
@@ -983,7 +983,7 @@ body.dark-theme {
 .contact__social {
   display: grid;
   row-gap: 1rem;
-  background-color: hsl(0, 0%, 10%);
+  background-color: var(--container-color);
   padding-block: 1rem 2rem;
   text-align: center;
 }
@@ -991,6 +991,7 @@ body.dark-theme {
 .contact__social-arrow {
   width: 32px;
   margin: 0 auto;
+  filter: invert(1);
 }
 
 .contact__social-data {
@@ -1000,13 +1001,13 @@ body.dark-theme {
 }
 
 .contact__social-description-1 {
-  color: var(--text-color-light);
+  color: var(--title-color);
   font-size: var(--small-font-size);
   margin-bottom: .5rem;
 }
 
 .contact__social-description-2 {
-  color: var(--white-color);
+  color: var(--title-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
 }
