@@ -12,5 +12,7 @@
     <orderEntry type="library" name="@emailjs/browser" level="application" />
     <orderEntry type="library" name="api" level="application" />
     <orderEntry type="library" name="scrollreveal" level="application" />
+    <orderEntry type="library" name="remixicon" level="application" />
+    <orderEntry type="library" name="api" level="application" />
   </component>
 </module>
